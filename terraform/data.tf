@@ -1,3 +1,5 @@
+data "aws_region" "current" {}
+
 data "aws_iam_policy_document" "controle_dieta_policy" {
   statement {
     sid      = "AllowPublicStaticWebSite"

@@ -12,7 +12,7 @@ resource "aws_cloudfront_distribution" "controle_dieta" {
   }
 
   enabled = true
-  aliases = ["controle-dieta.danielvazmartins.com.br"]
+  aliases = [var.domain_name]
 
   default_cache_behavior {
     allowed_methods = ["GET", "HEAD", "OPTIONS"]
@@ -22,10 +22,20 @@ resource "aws_cloudfront_distribution" "controle_dieta" {
     viewer_protocol_policy = "redirect-to-https"
   }
 
+  default_root_object = "index.html"
+  
+  custom_error_response {
+    error_code = 404
+    response_code = 200
+    response_page_path = "/index.html"
+  }
+
   viewer_certificate {
-    acm_certificate_arn = "arn:aws:acm:us-east-1:189956367266:certificate/c12e6a81-f810-44c6-8fd0-21635b84add8"
+    acm_certificate_arn = aws_acm_certificate.controle_dieta.arn
     ssl_support_method = "sni-only"
   }
+
+  depends_on = [aws_acm_certificate.controle_dieta]
 
   restrictions {
     geo_restriction {
