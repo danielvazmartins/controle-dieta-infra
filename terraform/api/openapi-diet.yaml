@@ -1,0 +1,96 @@
+openapi: 3.0.3
+info:
+  title: Controle de Dietas API
+  version: 1.0.0
+  description: API REST para gerenciar dietas com dois recursos principais.
+paths:
+  /diet:
+    get:
+      summary: Lista todas as dietas
+      operationId: listDiets
+      responses:
+        '200':
+          description: Lista de dietas
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Diet'
+      x-amazon-apigateway-integration:
+        type: mock
+        httpMethod: POST
+        passthroughBehavior: when_no_match
+        requestTemplates:
+          application/json: |
+            {
+              "statusCode": 200
+            }
+        responses:
+          default:
+            statusCode: '200'
+            responseTemplates:
+              application/json: |
+                [
+                  {
+                    "id": "1",
+                    "name": "Dieta baixa em carboidrato",
+                    "description": "Plano de dietas para reduzir carboidratos"
+                  },
+                  {
+                    "id": "2",
+                    "name": "Dieta de manutenção",
+                    "description": "Plano de dietas para manter o peso atual"
+                  }
+                ]
+  /diet/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+    get:
+      summary: Retorna uma dieta por ID
+      operationId: getDietById
+      responses:
+        '200':
+          description: Dieta encontrada
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Diet'
+      x-amazon-apigateway-integration:
+        type: mock
+        httpMethod: POST
+        passthroughBehavior: when_no_match
+        requestTemplates:
+          application/json: |
+            {
+              "statusCode": 200
+            }
+        responses:
+          default:
+            statusCode: '200'
+            responseTemplates:
+              application/json: |
+                {
+                  "id": "$input.params('id')",
+                  "name": "Dieta de exemplo",
+                  "description": "Detalhes de uma dieta específica"
+                }
+components:
+  schemas:
+    Diet:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+      required:
+        - id
+        - name
+        - description

@@ -77,7 +77,7 @@ resource "aws_api_gateway_deployment" "controle_dieta" {
 }
 
 resource "aws_api_gateway_stage" "controle_dieta_stage" {
-  stage_name    = "dev"
+  stage_name    = "old"
   rest_api_id   = aws_api_gateway_rest_api.controle_dieta_api.id
   deployment_id = aws_api_gateway_deployment.controle_dieta.id
 }

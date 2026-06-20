@@ -3,7 +3,12 @@ variable "bucket_name" {
   type        = string
 }
 
-variable "domain_name" {
-  description = "Domínio para o certificado ACM"
+variable "domain_name_app" {
+  description = "Domínio para o certificado ACM da aplicação"
+  type        = string
+}
+
+variable "domain_name_api" {
+  description = "Domínio para o certificado ACM da API"
   type        = string
 }

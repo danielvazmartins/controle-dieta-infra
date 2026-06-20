@@ -12,7 +12,7 @@ resource "aws_cloudfront_distribution" "controle_dieta" {
   }
 
   enabled = true
-  aliases = [var.domain_name]
+  aliases = [var.domain_name_app]
 
   default_cache_behavior {
     allowed_methods = ["GET", "HEAD", "OPTIONS"]
