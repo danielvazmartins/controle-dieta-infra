@@ -1,44 +1,17 @@
 # TODO - Controle Dieta Infra
 
-## 📋 Tarefas de Desenvolvimento
+## 🚀 Features em Desenvolvimento
 
-### 🎯 Features
+- [ ] [Infraestrutura Lambda + DynamoDB](specs/01-infra-lambda-dynamodb.md)
+- [ ] [Repositório e Código da Lambda](specs/02-lambda-code.md)
+- [ ] [CI/CD e Deploy Automático da Lambda](specs/03-lambda-cicd.md)
+- [ ] [Integração Frontend com Backend](specs/04-frontend-integration.md)
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
+## 📚 Documentação
 
-### 🐛 Bugs
-
-- [ ] Bug 1
-- [ ] Bug 2
-- [ ] Bug 3
-
-### 🔧 Melhorias
-
-- [ ] Melhoria 1
-- [ ] Melhoria 2
-- [ ] Melhoria 3
-- [ ] Limpar o cache do CloudFront após o deploy
-
-### 📚 Documentação
-
-- [ ] Documentação 1
-- [ ] Documentação 2
-- [ ] Documentação 3
-
-### 🧪 Testes
-
-- [ ] Teste 1
-- [ ] Teste 2
-- [ ] Teste 3
+- [Deployment](docs/guides/deployment.md)
+- [Troubleshooting](docs/guides/troubleshooting.md)
 
 ---
 
-## 📝 Notas
-
-Adicione aqui observações gerais sobre a infraestrutura e procedimentos de deploy.
-
----
-
-**Última atualização:** 2026-06-18
+**Última atualização:** 2026-07-19
