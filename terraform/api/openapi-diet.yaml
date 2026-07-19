@@ -30,19 +30,7 @@ paths:
           default:
             statusCode: '200'
             responseTemplates:
-              application/json: |
-                [
-                  {
-                    "id": "1",
-                    "name": "Dieta baixa em carboidrato",
-                    "description": "Plano de dietas para reduzir carboidratos"
-                  },
-                  {
-                    "id": "2",
-                    "name": "Dieta de manutenção",
-                    "description": "Plano de dietas para manter o peso atual"
-                  }
-                ]
+              application/json: file(./templates/list-diets-response.json)
   /diet/{id}:
     parameters:
       - name: id

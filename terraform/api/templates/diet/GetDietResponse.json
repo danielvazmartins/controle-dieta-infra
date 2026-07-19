@@ -1,0 +1,17 @@
+[
+  {
+    "id": "1",
+    "name": "Dieta baixa em carboidrato",
+    "description": "Plano de dietas para reduzir carboidratos"
+  },
+  {
+    "id": "2",
+    "name": "Dieta de manutenção",
+    "description": "Plano de dietas para manter o peso atual"
+  },
+  {
+    "id": "3",
+    "name": "Dieta hiperproteica",
+    "description": "Plano de dietas com alta ingestão de proteínas"
+  }
+]
