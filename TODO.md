@@ -2,11 +2,10 @@
 
 ## 🚀 Features em Desenvolvimento
 
-- [ ] [Lambda + DynamoDB + API Gateway](specs/lambda-dynamodb-api.md)
-- [ ] Limpar cache CloudFront após deploy
-- [ ] Monitoring e Logs
-- [ ] Autenticação e Autorização
-- [ ] Testes automatizados
+- [ ] [Infraestrutura Lambda + DynamoDB](specs/01-infra-lambda-dynamodb.md)
+- [ ] [Repositório e Código da Lambda](specs/02-lambda-code.md)
+- [ ] [CI/CD e Deploy Automático da Lambda](specs/03-lambda-cicd.md)
+- [ ] [Integração Frontend com Backend](specs/04-frontend-integration.md)
 
 ## 📚 Documentação
 
