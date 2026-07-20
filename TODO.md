@@ -9,8 +9,8 @@
 
 ## 📚 Documentação
 
-- [Deployment](docs/guides/deployment.md)
-- [Troubleshooting](docs/guides/troubleshooting.md)
+- [ ] [Deployment](docs/guides/deployment.md)
+- [ ] [Troubleshooting](docs/guides/troubleshooting.md)
 
 ---
 
